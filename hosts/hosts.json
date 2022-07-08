@@ -1,0 +1,252 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://github.com/TMI/dataSources/hosts/hosts.json",
+	"title": "Root",
+	"type": "object",
+	"required": [
+		"dataSource",
+		"connectionInfo",
+		"platform",
+		"collect",
+		"output"
+	],
+	"properties": {
+		"dataSource": {
+			"$id": "#root/dataSource",
+			"title": "Datasource",
+			"type": "object",
+			"required": [
+				"name",
+				"displayName",
+				"description"
+			],
+			"properties": {
+				"name": {
+					"$id": "#root/dataSource/name",
+					"title": "Name",
+					"type": "string",
+					"default": "",
+					"examples": [
+						"hosts"
+					],
+					"pattern": "^.*$"
+				},
+				"displayName": {
+					"$id": "#root/dataSource/displayName",
+					"title": "Displayname",
+					"type": "string",
+					"default": "",
+					"examples": [
+						"Hosts File"
+					],
+					"pattern": "^.*$"
+				},
+				"description": {
+					"$id": "#root/dataSource/description",
+					"title": "Description",
+					"type": "string",
+					"default": "",
+					"examples": [
+						"The hosts file is one of several system facilities that assists in addressing network nodes in a computer network."
+					],
+					"pattern": "^.*$"
+				}
+			}
+		},
+		"connectionInfo": {
+			"$id": "#root/connectionInfo",
+			"title": "Connectioninfo",
+			"type": "object",
+			"required": [
+				"userAuthentication",
+				"sshAuthentication"
+			],
+			"properties": {
+				"userAuthentication": {
+					"$id": "#root/connectionInfo/userAuthentication",
+					"title": "Userauthentication",
+					"type": "object",
+					"required": [
+						"user",
+						"password"
+					],
+					"properties": {
+						"user": {
+							"$id": "#root/connectionInfo/userAuthentication/user",
+							"title": "User",
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"password": {
+							"$id": "#root/connectionInfo/userAuthentication/password",
+							"title": "Password",
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						}
+					}
+				},
+				"sshAuthentication": {
+					"$id": "#root/connectionInfo/sshAuthentication",
+					"title": "Sshauthentication",
+					"type": "object",
+					"required": [
+						"sshKey"
+					],
+					"properties": {
+						"sshKey": {
+							"$id": "#root/connectionInfo/sshAuthentication/sshKey",
+							"title": "Sshkey",
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+
+			}
+		},
+		"platform": {
+			"$id": "#root/platform",
+			"title": "Platform",
+			"type": "object",
+			"required": [
+				"windows",
+				"linux"
+			],
+			"properties": {
+				"windows": {
+					"$id": "#root/platform/windows",
+					"title": "Windows",
+					"type": "boolean",
+					"examples": [
+						true
+					],
+					"default": true
+				},
+				"linux": {
+					"$id": "#root/platform/linux",
+					"title": "Linux",
+					"type": "boolean",
+					"examples": [
+						true
+					],
+					"default": true
+				}
+			}
+		},
+		"collect": {
+			"$id": "#root/collect",
+			"title": "Collect",
+			"type": "object",
+			"required": [
+				"entry"
+			],
+			"properties": {
+				"entry": {
+					"$id": "#root/collect/entry",
+					"title": "Entry",
+					"type": "object",
+					"required": [
+						"ipAddress",
+						"hosts"
+					],
+					"properties": {
+						"ipAddress": {
+							"$id": "#root/collect/entry/ipAddress",
+							"title": "Ipaddress",
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"hosts": {
+							"$id": "#root/collect/entry/hosts",
+							"title": "Hosts",
+							"type": "array",
+							"default": [],
+							"items": {
+								"$id": "#root/collect/entry/hosts/items",
+								"title": "Items",
+								"type": "object",
+								"required": [
+									"hostName"
+								],
+								"properties": {
+									"hostName": {
+										"$id": "#root/collect/entry/hosts/items/hostName",
+										"title": "Hostname",
+										"type": "string",
+										"default": "",
+										"examples": [
+											""
+										],
+										"pattern": "^.*$"
+									}
+								}
+							}
+
+						}
+					}
+				}
+
+			}
+		},
+		"output": {
+			"$id": "#root/output",
+			"title": "Output",
+			"type": "object",
+			"required": [
+				"entry"
+			],
+			"properties": {
+				"entry": {
+					"$id": "#root/output/entry",
+					"title": "Entry",
+					"type": "object",
+					"required": [
+						"ipAddress",
+						"hostNames"
+					],
+					"properties": {
+						"ipAddress": {
+							"$id": "#root/output/entry/ipAddress",
+							"title": "Ipaddress",
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						},
+						"hostNames": {
+							"$id": "#root/output/entry/hostNames",
+							"title": "Hostnames",
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+
+			}
+		}
+
+	}
+}
