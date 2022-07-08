@@ -1,7 +1,7 @@
 {
 	"definitions": {},
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://github.com/TMI/dataSources/hosts/hosts.json",
+	"$id": "https://raw.githubusercontent.com/TMInventory/dataSources/main/hosts/hosts.json",
 	"title": "Root",
 	"type": "object",
 	"required": [
