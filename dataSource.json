@@ -1,0 +1,186 @@
+{
+	"type": "object",
+	"schema": "http://json-schema.org/draft-07/schema#",
+	"additionalProperties": false,
+	"definitions": null,
+	"id": "https://raw.githubusercontent.com/TMInventory/dataSources/main/dataSource.json",
+	"properties": {
+		"connectionInfo": {
+			"type": "object",
+			"additionalProperties": false,
+			"id": "#root/connectionInfo",
+			"properties": {
+				"userAuthentication": {
+					"type": "object",
+					"additionalProperties": false,
+					"id": "#root/connectionInfo/userAuthentication",
+					"properties": {
+						"user": {
+							"type": "string",
+							"examples": [],
+							"id": "#root/connectionInfo/userAuthentication/user",
+							"ref": null,
+							"minLength": 0,
+							"maxLength": 0,
+							"pattern": "^.*$",
+							"enum": null,
+							"title": "TMI Datasource User Account",
+							"description": "TMI Datasource User Account",
+							"default": null
+						},
+						"password": {
+							"type": "string",
+							"examples": [],
+							"id": "#root/connectionInfo/userAuthentication/password",
+							"ref": null,
+							"minLength": 0,
+							"maxLength": 0,
+							"pattern": "^.*$",
+							"enum": null,
+							"title": "TMI Datasource User Account Password",
+							"description": "TMI Datasource User Account Password",
+							"default": null
+						}
+					},
+					"required": [
+						"user",
+						"password"
+					],
+					"title": "TMI Datasource UserAuthentication",
+					"description": "TMI Datasource UserAuthentication defines either password based auth or keybased auth",
+					"default": null,
+					"enum": null
+				},
+				"sshAuthentication": {
+					"type": "object",
+					"additionalProperties": false,
+					"id": "#root/connectionInfo/sshAuthentication",
+					"properties": {
+						"sshKey": {
+							"type": "string",
+							"examples": [],
+							"id": "#root/connectionInfo/sshAuthentication/sshKey",
+							"ref": null,
+							"minLength": 0,
+							"maxLength": 0,
+							"pattern": "^.*$",
+							"enum": null,
+							"title": "TMI Datasource ssh Key",
+							"description": "TMI Datasource ssh Key",
+							"default": null
+						}
+					},
+					"required": [
+						"sshKey"
+					],
+					"title": "TMI Datasource ssh Authentication",
+					"description": "TMI Datasource ssh Authentication",
+					"default": null,
+					"enum": null
+				}
+			},
+			"required": [
+				"userAuthentication",
+				"sshAuthentication"
+			],
+			"title": "TMI Datasource ConnectionInformation",
+			"description": "TMI Datasource ConnectionInformation, defines how to connect to the resource",
+			"default": null,
+			"enum": null
+		},
+		"platform": {
+			"type": "object",
+			"additionalProperties": false,
+			"id": "#root/platform",
+			"properties": {
+				"linux": {
+					"type": "boolean",
+					"id": "#root/platform/linux",
+					"title": "TMI Datasource Linux Os",
+					"description": "TMI Datasource Linux Os",
+					"default": false,
+					"enum": null
+				},
+				"windows": {
+					"type": "boolean",
+					"id": "#root/platform/windows",
+					"title": "TMI Datasource Windows Os",
+					"description": "TMI Datasource Windows Os",
+					"default": false,
+					"enum": null
+				}
+			},
+			"required": [
+				"linux",
+				"windows"
+			],
+			"title": "TMI Datasource Supported Platforms",
+			"description": "TMI Datasource Supported Platforms",
+			"default": "",
+			"enum": null
+		},
+		"dataSource": {
+			"type": "object",
+			"additionalProperties": false,
+			"id": "#root/datasource",
+			"properties": {
+				"displayName": {
+					"type": "string",
+					"examples": [],
+					"id": "#/root/dataSource/displayName",
+					"ref": null,
+					"minLength": 0,
+					"maxLength": 0,
+					"pattern": "^.*$",
+					"enum": null,
+					"title": "TMI Datasource DisplayName Title",
+					"description": "TMI Datasource DisplayName Description",
+					"default": null
+				},
+				"description": {
+					"type": "string",
+					"examples": [],
+					"id": "#root/dataSource/description",
+					"ref": null,
+					"minLength": 0,
+					"maxLength": 0,
+					"pattern": "^.*$",
+					"enum": null,
+					"title": "TMI Datasource Description Title",
+					"description": "TMI Datasource Description Description",
+					"default": null
+				},
+				"name": {
+					"type": "string",
+					"examples": [],
+					"id": "#/root/dataSource/name",
+					"ref": null,
+					"minLength": 0,
+					"maxLength": 0,
+					"pattern": "^.*$",
+					"enum": null,
+					"title": "TMI Datasource Title",
+					"description": "TMI Datasource Name Description",
+					"default": null
+				}
+			},
+			"required": [
+				"name",
+				"displayName",
+				"description"
+			],
+			"title": "TMI DataSource",
+			"description": "TMI Datasource schema, defines what is required for discovery and collection",
+			"default": null,
+			"enum": null
+		}
+	},
+	"required": [
+		"dataSource",
+		"connectionInfo",
+		"platform"
+	],
+	"title": "TMI Datasource Schema",
+	"description": "TMI Datasource Schema to define the dataSource",
+	"default": null
+}
