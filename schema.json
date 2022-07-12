@@ -167,12 +167,52 @@
    "description": "TMI Datasource schema, defines what is required for discovery and collection",
    "default": {},
    "enum": []
+  },
+  "output": {
+   "type": "object",
+   "additionalProperties": false,
+   "$id": "#root/output",
+   "properties": {
+    "ipAddress": {
+     "type": "string",
+     "examples": [],
+     "$id": "#/root/output/ipAddress",
+     "minLength": 0,
+     "maxLength": 0,
+     "pattern": "^.*$",
+     "enum": [],
+     "title": "TMI Datasource ipAddress Title",
+     "description": "TMI Datasource ipAddress Description",
+     "default": ""
+    },
+    "host": {
+     "type": "string",
+     "examples": [],
+     "$id": "#root/output/host",
+     "minLength": 0,
+     "maxLength": 0,
+     "pattern": "^.*$",
+     "enum": [],
+     "title": "TMI Datasource host Title",
+     "description": "TMI Datasource host Description",
+     "default": ""
+    }
+   },
+   "required": [
+    "ipAddress",
+    "host"
+   ],
+   "title": "TMI DataSource",
+   "description": "TMI Datasource schema, defines what is required for discovery and collection",
+   "default": {},
+   "enum": []
   }
  },
  "required": [
   "dataSource",
   "connectionInfo",
-  "platform"
+  "platform",
+  "output"
  ],
  "title": "TMI Datasource Schema",
  "description": "TMI Datasource Schema to define the dataSource",
