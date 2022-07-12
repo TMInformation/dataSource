@@ -25,7 +25,7 @@
        "enum": [],
        "title": "TMI Datasource User Account",
        "description": "TMI Datasource User Account",
-       "default": null
+       "default": ""
       },
       "password": {
        "type": "string",
@@ -37,7 +37,7 @@
        "enum": [],
        "title": "TMI Datasource User Account Password",
        "description": "TMI Datasource User Account Password",
-       "default": null
+       "default": ""
       }
      },
      "required": [
@@ -46,7 +46,7 @@
      ],
      "title": "TMI Datasource UserAuthentication",
      "description": "TMI Datasource UserAuthentication defines either password based auth or keybased auth",
-     "default": null,
+     "default": {},
      "enum": []
     },
     "sshAuthentication": {
@@ -64,7 +64,7 @@
        "enum": [],
        "title": "TMI Datasource ssh Key",
        "description": "TMI Datasource ssh Key",
-       "default": null
+       "default": ""
       }
      },
      "required": [
@@ -72,7 +72,7 @@
      ],
      "title": "TMI Datasource ssh Authentication",
      "description": "TMI Datasource ssh Authentication",
-     "default": null,
+     "default": {},
      "enum": []
     }
    },
@@ -82,7 +82,7 @@
    ],
    "title": "TMI Datasource ConnectionInformation",
    "description": "TMI Datasource ConnectionInformation, defines how to connect to the resource",
-   "default": null,
+   "default": {},
    "enum": []
   },
   "platform": {
@@ -131,7 +131,7 @@
      "enum": [],
      "title": "TMI Datasource DisplayName Title",
      "description": "TMI Datasource DisplayName Description",
-     "default": null
+     "default": ""
     },
     "description": {
      "type": "string",
@@ -143,7 +143,7 @@
      "enum": [],
      "title": "TMI Datasource Description Title",
      "description": "TMI Datasource Description Description",
-     "default": null
+     "default": ""
     },
     "name": {
      "type": "string",
@@ -155,7 +155,7 @@
      "enum": [],
      "title": "TMI Datasource Title",
      "description": "TMI Datasource Name Description",
-     "default": null
+     "default": ""
     }
    },
    "required": [
@@ -165,7 +165,7 @@
    ],
    "title": "TMI DataSource",
    "description": "TMI Datasource schema, defines what is required for discovery and collection",
-   "default": null,
+   "default": {},
    "enum": []
   }
  },
@@ -176,5 +176,5 @@
  ],
  "title": "TMI Datasource Schema",
  "description": "TMI Datasource Schema to define the dataSource",
- "default": null
+ "default": {}
 }
