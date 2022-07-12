@@ -3,7 +3,7 @@
  "$schema": "http://json-schema.org/draft-07/schema#",
  "additionalProperties": false,
  "definitions": {},
- "$id": "https://raw.githubusercontent.com/TMInventory/dataSource/main/schema.json",
+ "$id": "https://raw.githubusercontent.com/TMInformation/dataSource/main/schema.json",
  "properties": {
   "connectionInfo": {
    "type": "object",
